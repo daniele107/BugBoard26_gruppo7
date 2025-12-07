@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=1440, height=1024, initial-scale=1.0"/>
+<title>UC6 - Modalità Readonly</title>
+<style>
+  :root{--w:1440px;--h:1024px;--pad:36px;--muted:#6f7c86;--panel:#f7f8fa;--dashed:#d6dde4}
+  *{box-sizing:border-box;font-family:Inter,system-ui,Roboto,Arial;}
+  body{margin:0;background:#fff;color:#111}
+  .canvas{width:var(--w);height:var(--h);padding:var(--pad);border:1px solid #e8eef4;margin:auto}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+  h1{font-size:28px;margin:0}
+  table{width:100%;border-collapse:collapse;margin-top:14px}
+  th,td{padding:12px;border-bottom:1px dashed #e6ecef;text-align:left;font-size:15px}
+  th{background:#f0f2f5}
+  footer{position:absolute;left:var(--pad);bottom:16px;color:var(--muted);font-size:13px}
+  .readonly{background:#f7f8fa}
+</style>
+</head>
+<body>
+<div class="canvas" role="main" aria-label="UC6 - Modalità readonly">
+  <header>
+    <h1>IssueTrack Pro — Modalità Visualizzazione</h1>
+    <div style="color:var(--muted)">UC-06</div>
+  </header>
+
+  <table aria-label="Elenco bug readonly" class="readonly">
+    <thead><tr><th>ID</th><th>Titolo</th><th>Tipo</th><th>Priorità</th><th>Stato</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Errore login</td><td>Bug</td><td>Alta</td><td>Todo</td></tr>
+      <tr><td>2</td><td>Richiesta nuova funzionalità</td><td>Feature</td><td>Media</td><td>Todo</td></tr>
+      <tr><td>3</td><td>Correzione documentazione</td><td>Documentation</td><td>Bassa</td><td>In progress</td></tr>
+    </tbody>
+  </table>
+
+  <footer>UC-06 — Modalità readonly utenti esterni — IssueTrack Pro</footer>
+</div>
+</body>
+</html>

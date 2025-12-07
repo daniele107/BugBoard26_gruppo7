@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=1440, height=1024, initial-scale=1.0"/>
+<title>UC4 - Assegnazione Bug</title>
+<style>
+  :root{--w:1440px;--h:1024px;--pad:36px;--muted:#6f7c86;--panel:#f7f8fa;--dashed:#d6dde4}
+  *{box-sizing:border-box;font-family:Inter,system-ui,Roboto,Arial;}
+  body{margin:0;background:#fff;color:#111}
+  .canvas{width:var(--w);height:var(--h);padding:var(--pad);border:1px solid #e8eef4;margin:auto}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+  h1{font-size:28px;margin:0}
+  table{width:100%;border-collapse:collapse;margin-top:14px}
+  th,td{padding:12px;border-bottom:1px dashed #e6ecef;text-align:left;font-size:15px}
+  select,input{padding:8px;margin-right:8px;border-radius:6px;border:1px solid #d6dbe0}
+  .controls{margin-top:12px}
+  .btn{padding:10px 14px;border-radius:8px;border:1px solid #cfd6db;background:#fff;font-weight:700}
+  .btn.primary{background:#eaf1ff;border-color:#c8d9fb}
+  footer{position:absolute;left:var(--pad);bottom:16px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<div class="canvas" role="main" aria-label="UC4 - Assegnazione bug">
+  <header>
+    <h1>IssueTrack Pro — Assegna Bug</h1>
+    <div style="color:var(--muted)">UC-04</div>
+  </header>
+
+  <table aria-label="Elenco bug non assegnati">
+    <thead><tr><th>ID</th><th>Titolo</th><th>Priorità</th><th>Assegna a</th><th>Azioni</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Errore login</td><td>Alta</td>
+        <td>
+          <select><option>Luca Verdi</option><option>Maria Rossi</option><option>-</option></select>
+        </td>
+        <td><button class="btn primary">Assegna</button></td>
+      </tr>
+      <tr><td>4</td><td>Bug frontend</td><td>Media</td>
+        <td>
+          <select><option>Luca Verdi</option><option>Maria Rossi</option><option>-</option></select>
+        </td>
+        <td><button class="btn primary">Assegna</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer>UC-04 — Assegnazione bug e notifiche — IssueTrack Pro</footer>
+</div>
+</body>
+</html>

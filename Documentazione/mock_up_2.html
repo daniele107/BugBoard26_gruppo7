@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=1440, height=1024, initial-scale=1.0"/>
+<title>UC2 - Creazione Issue</title>
+<style>
+  :root{--w:1440px;--h:1024px;--pad:36px;--muted:#6f7c86;--panel:#f7f8fa;--dashed:#d6dde4}
+  *{box-sizing:border-box;font-family:Inter,system-ui,Roboto,Arial;}
+  body{margin:0;background:#fff;color:#111}
+  .canvas{width:var(--w);height:var(--h);padding:var(--pad);border:1px solid #e8eef4;margin:auto}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+  h1{font-size:28px;margin:0}
+  .content{display:flex;gap:28px}
+  .form{width:760px;background:var(--panel);border:1px dashed var(--dashed);padding:22px;border-radius:8px}
+  label{display:block;color:var(--muted);font-size:14px;margin-top:12px}
+  input, textarea, select{width:100%;padding:12px;border:1px solid #d6dbe0;border-radius:6px;margin-top:8px;font-size:15px;background:#fff}
+  textarea{height:220px;resize:none}
+  .controls{margin-top:14px}
+  .btn{padding:10px 14px;border-radius:8px;border:1px solid #cfd6db;background:#fff;font-weight:700}
+  .btn.primary{background:#eaf1ff;border-color:#c8d9fb}
+  aside{flex:1}
+  .note{background:#fff;border:1px dashed var(--dashed);padding:14px;border-radius:8px}
+  footer{position:absolute;left:var(--pad);bottom:16px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<div class="canvas" role="main" aria-label="UC2 - Creazione Issue">
+  <header>
+    <h1>IssueTrack Pro — Nuova Issue</h1>
+    <div style="color:var(--muted)">UC-02</div>
+  </header>
+
+  <div class="content">
+    <form class="form" aria-label="Form Creazione Issue">
+      <label for="title">Titolo *</label>
+      <input id="title" type="text" placeholder="Titolo della issue (obbligatorio)"/>
+      <label for="desc">Descrizione *</label>
+      <textarea id="desc" placeholder="Inserisci la descrizione dettagliata..."></textarea>
+      <label for="type">Tipo</label>
+      <select id="type"><option>Bug</option><option>Feature</option><option>Documentation</option><option>Question</option></select>
+      <label for="priority">Priorità (opzionale)</label>
+      <select id="priority"><option>Alta</option><option>Media</option><option>Bassa</option></select>
+      <label for="attach">Allega immagine (opzionale)</label>
+      <input id="attach" type="text" placeholder="Drag & Drop o seleziona file"/>
+      <div class="controls">
+        <button class="btn primary" type="button">Crea Issue</button>
+        <button class="btn" type="button">Annulla</button>
+      </div>
+      <p style="margin-top:12px;color:var(--muted)">Le issue create avranno stato iniziale: <strong>todo</strong>.</p>
+    </form>
+
+    <aside>
+      <div class="note">
+        <strong>Linee guida</strong>
+        <p style="color:var(--muted)">Titolo e descrizione obbligatori. Tipo, priorità e allegato sono opzionali.</p>
+        <p style="margin-top:10px;color:var(--muted)">Esempio titolo: "Errore login all'avvio".</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer>UC-02 — Creazione e gestione issue — IssueTrack Pro</footer>
+</div>
+</body>
+</html>
